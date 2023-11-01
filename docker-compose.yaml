@@ -1,0 +1,11 @@
+version: "3.8"
+name: finkit-dev
+services:
+  nginx:
+    image: "nginx:mainline-alpine"
+    container_name: 'nginx_test'
+    ports: 
+      - "8080:80"
+    volumes:
+      - ./src_web/:/usr/share/nginx/html/
+      - ./dev_logs/nginx:/var/log/nginx/
